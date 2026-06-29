@@ -31,20 +31,12 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
             });
         }
     });
-});
-
-// WhatsApp Order
-function orderProduct(name, price) {
+}); function orderProduct(name, price) {
     const phone = "2348128748746";
 
-    const message = `Hello RAXY SOCIAL 👋
+    const message = `Hello, RAXY SOCIAL.
 
-I'd like to buy:
-
-• ${name}
-• Price: ${price}
-
-Is it available?`;
+I want to buy ${name} - ${price}.`;
 
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
