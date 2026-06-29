@@ -34,7 +34,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 }); function orderProduct(name, price) {
     const phone = "2348128748746";
 
-    const message = `Hello, RAXY SOCIAL.
+    const message = `Hello RAXY SOCIAL.
 
 I want to buy ${name} - ${price}.`;
 
