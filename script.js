@@ -31,4 +31,20 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
       });
     }
   });
-});
+function orderProduct(name, price) {
+    const phone = "2348128748746";
+
+    const message =
+`Hello RAXY SOCIAL 👋
+
+I'd like to buy:
+
+• ${name}
+• Price: ${price}
+
+Is it available?`;
+
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+}
