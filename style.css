@@ -243,3 +243,28 @@ header{
     background:#25D366;
     color:#fff;
 }
+/* Browse Products Dropdown */
+
+.browse-products{
+    width:280px;
+    padding:14px 18px;
+    background:#25D366;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    outline:none;
+    margin-top:20px;
+    transition:.3s;
+}
+
+.browse-products:hover{
+    background:#1faa50;
+}
+
+.browse-products option{
+    background:#161b22;
+    color:#fff;
+}
