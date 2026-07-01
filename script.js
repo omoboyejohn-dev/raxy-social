@@ -69,3 +69,25 @@ if (themeToggle) {
         }
     });
 }
+/* ============================
+   RAXY SOCIAL Welcome Popup
+============================ */
+
+window.addEventListener("load", function () {
+
+    const popup = document.getElementById("welcomePopup");
+    const closeBtn = document.getElementById("closePopup");
+
+    popup.style.display = "flex";
+
+    closeBtn.addEventListener("click", function () {
+        popup.style.display = "none";
+    });
+
+    popup.addEventListener("click", function(e){
+        if(e.target === popup){
+            popup.style.display = "none";
+        }
+    });
+
+});
