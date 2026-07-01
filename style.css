@@ -268,3 +268,50 @@ header{
     background:#161b22;
     color:#fff;
 }
+.browse-products option{
+    background:#161b22;
+    color:#fff;
+}
+
+/* Footer */
+
+.footer{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+    margin-top:60px;
+    border-top:2px solid gold;
+}
+
+.footer h2{
+    color:gold;
+    margin-bottom:15px;
+}
+
+.footer h3{
+    color:gold;
+    margin:25px 0 15px;
+}
+
+.footer p{
+    margin:8px 0;
+    color:#ddd;
+}
+
+.footer a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    margin:0 8px;
+}
+
+.footer a:hover{
+    color:gold;
+}
+
+.copyright{
+    margin-top:25px;
+    color:#999;
+    font-size:14px;
+}
