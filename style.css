@@ -383,3 +383,18 @@ body.light-mode .buy{
 body.light-mode .browse-products{
     color:#fff;
 }
+body.light-mode .hero p{
+    color:#555 !important;
+}
+
+body.light-mode .stock{
+    color:#666 !important;
+}
+
+body.light-mode .price{
+    color:#25D366 !important;
+}
+
+body.light-mode .card{
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
