@@ -156,8 +156,27 @@ nav a:hover{
     margin-bottom:20px;
 }
 
-@media(max-width:768px){
+.buy{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    background:#25D366;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    padding:12px 20px;
+    border-radius:10px;
+    transition:all .3s ease;
+}
 
+.buy:hover{
+    background:#1faa50;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(37,211,102,.35);
+}
+
+@media(max-width:768px){
 header{
     flex-direction:column;
     gap:15px;
