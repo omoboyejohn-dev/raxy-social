@@ -55,3 +55,15 @@ function goToCategory() {
 
     select.selectedIndex = 0;
 }
+// Dark / Light Mode
+const themeToggle = document.getElementById("themeToggle");
+
+themeToggle.addEventListener("click", function () {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+        themeToggle.innerHTML = "🌞 Light Mode";
+    } else {
+        themeToggle.innerHTML = "🌙 Dark Mode";
+    }
+});
