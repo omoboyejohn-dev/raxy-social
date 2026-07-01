@@ -507,17 +507,3 @@ img{
     background:#25D366;
     opacity:.5;
 }
-/* Best Seller Badge */
-
-.badge{
-    position:absolute;
-    top:15px;
-    right:15px;
-    background:#25D366;
-    color:#fff;
-    font-size:12px;
-    font-weight:bold;
-    padding:6px 10px;
-    border-radius:20px;
-    box-shadow:0 5px 15px rgba(37,211,102,.4);
-}
