@@ -41,4 +41,17 @@ I want to buy ${name} - ${price}.`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
     window.open(url, "_blank");
+} // Browse Products Dropdown
+function goToCategory() {
+    const select = document.getElementById("categorySelect");
+    const category = select.value;
+
+    if (category) {
+        document.getElementById(category).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+
+    select.selectedIndex = 0;
 }
