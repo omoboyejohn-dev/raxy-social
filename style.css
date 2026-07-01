@@ -316,7 +316,11 @@ header{
     font-size:14px;
 }
 
-...your existing CSS...
+.copyright{
+    margin-top:25px;
+    color:#999;
+    font-size:14px;
+}
 
 .copyright{
     ...
