@@ -398,3 +398,36 @@ body.light-mode .price{
 body.light-mode .card{
     box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
+/* ===========================
+   Hover Animations
+=========================== */
+
+.card{
+    transition: all 0.35s ease;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.25);
+}
+
+.buy,
+.btn,
+.browse-products{
+    transition: all .3s ease;
+}
+
+.buy:hover,
+.btn:hover,
+.browse-products:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(37,211,102,.4);
+}
+
+img{
+    transition: transform .4s ease;
+}
+
+.card:hover img{
+    transform: scale(1.08);
+}
