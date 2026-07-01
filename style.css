@@ -469,3 +469,22 @@ img{
 .card:hover::before{
     left:100%;
 }
+/* Premium Section Titles */
+
+.section-title{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    text-align:center;
+}
+
+.section-title::before,
+.section-title::after{
+    content:"";
+    flex:1;
+    max-width:120px;
+    height:2px;
+    background:#25D366;
+    opacity:.5;
+}
