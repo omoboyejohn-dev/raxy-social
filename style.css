@@ -545,7 +545,8 @@ img{
 }
 
 body{
-    padding-bottom:90px;
+    padding-bottom:95px;
+padding-bottom:calc(95px + env(safe-area-inset-bottom));
     scroll-behavior:smooth;
 }
 
