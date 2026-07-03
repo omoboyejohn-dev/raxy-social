@@ -1,140 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Register - RAXY SOCIAL</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>Create Account - RAXY SOCIAL</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
-
 <body>
 
-    <div class="login-container">
+<div class="login-container">
 
-        <div class="login-box">
+    <div class="login-box">
 
-            <h1>📝 Create Your Account</h1>
+        <h1>📝 Create Your Account</h1>
 
-            <p>Create your RAXY SOCIAL account and start shopping premium digital products.</p>
+        <p>
+            Continue with your Google account to access
+            <strong>RAXY SOCIAL</strong>.
+        </p>
 
-            <form onsubmit="return validateForm()">
+        <button class="google-btn" onclick="googleSignIn()">
 
-                <label for="username">Username</label>
+            <img
+                src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                alt="Google"
+                width="22"
+                height="22">
 
-                <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    placeholder="Choose your preferred username"
-                    autocomplete="username"
-                    required>
+            Continue with Google
 
-                <label for="email">Email Address</label>
+        </button>
 
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your email address"
-                    autocomplete="email"
-                    required>
+        <br><br>
 
-                <label for="phone">Phone Number</label>
-
-                <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="Enter your phone number"
-                    autocomplete="tel"
-                    required>
-
-                <label for="registerPassword">Password</label>
-
-                <div class="password-box">
-
-                    <input
-                        type="password"
-                        id="registerPassword"
-                        name="password"
-                        placeholder="Choose a password"
-                        autocomplete="new-password"
-                        oninput="checkPasswordStrength()"
-                        required>
-
-                    <span
-                        class="toggle-password"
-                        onclick="toggleRegisterPassword()">
-                        👁️
-                    </span>
-
-                </div>
-
-                <p id="passwordStrength" class="password-strength"></p>
-
-                <label for="confirmPassword">Confirm Password</label>
-
-                <div class="password-box">
-
-                    <input
-                        type="password"
-                        id="confirmPassword"
-                        name="confirm_password"
-                        placeholder="Repeat your password"
-                        autocomplete="new-password"
-                        required>
-
-                    <span
-                        class="toggle-password"
-                        onclick="toggleConfirmPassword()">
-                        👁️
-                    </span>
-
-                </div>
-
-                <label class="terms">
-
-                    <input
-                        type="checkbox"
-                        id="terms"
-                        required>
-
-                    I agree to the
-                    <a href="#">Terms &amp; Conditions</a>
-
-                </label>
-
-                <button type="submit">
-                    📝 Create Account
-                </button>
-
-            </form>
-
-            <div class="signup-link">
-
-                <p>Already have an account?</p>
-
-                <a href="login.html" class="back-home">
-                    🔑 Log In
-                </a>
-
-                <br><br>
-
-                <a href="index.html" class="back-home">
-                    ⬅️ Back to Home
-                </a>
-
-            </div>
-
-        </div>
+        <a href="index.html" class="back-home">
+            ⬅️ Back to Home
+        </a>
 
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+<script>
+
+function googleSignIn(){
+
+    alert("Google Sign-In will be connected with Firebase Authentication.");
+
+}
+
+</script>
 
 </body>
-
 </html>
