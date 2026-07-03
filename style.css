@@ -657,3 +657,79 @@ padding-bottom:calc(95px + env(safe-area-inset-bottom));
 .popup-btn:hover{
     transform:translateY(-2px);
 }
+/* ===== LOGIN PAGE ===== */
+
+.login-container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0d1117;
+    padding:20px;
+}
+
+.login-box{
+    width:100%;
+    max-width:420px;
+    background:#161b22;
+    border-radius:15px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.login-box h1{
+    color:#25D366;
+    margin-bottom:10px;
+}
+
+.login-box p{
+    color:#ccc;
+    margin-bottom:25px;
+}
+
+.login-box input{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:10px;
+    background:#21262d;
+    color:#fff;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+.login-box input:focus{
+    outline:2px solid #25D366;
+}
+
+.login-box button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#25D366;
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.login-box button:hover{
+    background:#1fa855;
+}
+
+.signup-link{
+    margin-top:20px;
+}
+
+.signup-link a{
+    color:#25D366;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.signup-link a:hover{
+    text-decoration:underline;
+}
