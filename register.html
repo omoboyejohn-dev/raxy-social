@@ -17,32 +17,38 @@
 
         <h1>📝 Create Your Account</h1>
 
-        <p>Join RAXY SOCIAL and start shopping premium digital products.</p>
+        <p>Create your RAXY SOCIAL account and start shopping premium digital products.</p>
 
         <form action="#" method="POST">
 
-            <label>Username</label>
+            <label for="username">Username</label>
+
             <input
                 type="text"
+                id="username"
                 name="username"
-                placeholder="Choose your username"
+                placeholder="Choose your preferred username"
                 required>
 
-            <label>Email Address</label>
+            <label for="email">Email Address</label>
+
             <input
                 type="email"
+                id="email"
                 name="email"
                 placeholder="Enter your email address"
                 required>
 
-            <label>Phone Number</label>
+            <label for="phone">Phone Number</label>
+
             <input
                 type="tel"
+                id="phone"
                 name="phone"
                 placeholder="Enter your phone number"
                 required>
 
-            <label>Password</label>
+            <label for="registerPassword">Password</label>
 
             <div class="password-box">
 
@@ -53,14 +59,13 @@
                     placeholder="Choose a password"
                     required>
 
-                <span class="toggle-password"
-                onclick="toggleRegisterPassword()">
+                <span class="toggle-password" onclick="toggleRegisterPassword()">
                     👁️
                 </span>
 
             </div>
 
-            <label>Confirm Password</label>
+            <label for="confirmPassword">Confirm Password</label>
 
             <div class="password-box">
 
@@ -71,16 +76,19 @@
                     placeholder="Repeat your password"
                     required>
 
-                <span class="toggle-password"
-                onclick="toggleConfirmPassword()">
+                <span class="toggle-password" onclick="toggleConfirmPassword()">
                     👁️
                 </span>
 
             </div>
 
             <label class="terms">
+
                 <input type="checkbox" required>
-                I agree to the <a href="#">Terms & Conditions</a>
+
+                I agree to the
+                <a href="#">Terms & Conditions</a>
+
             </label>
 
             <button type="submit">
@@ -115,8 +123,7 @@ function toggleRegisterPassword() {
 
     const password = document.getElementById("registerPassword");
 
-    password.type =
-    password.type === "password" ? "text" : "password";
+    password.type = password.type === "password" ? "text" : "password";
 
 }
 
@@ -124,8 +131,7 @@ function toggleConfirmPassword() {
 
     const password = document.getElementById("confirmPassword");
 
-    password.type =
-    password.type === "password" ? "text" : "password";
+    password.type = password.type === "password" ? "text" : "password";
 
 }
 
