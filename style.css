@@ -949,3 +949,41 @@ padding-bottom:calc(95px + env(safe-area-inset-bottom));
     background:#1565c0;
     transform:translateY(-2px);
 }
+/* Register & Login Inputs */
+
+.login-box label{
+    display:block;
+    margin-top:18px;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#ffffff;
+}
+
+.login-box input{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#2a2f3a;
+    color:#ffffff;
+    font-size:16px;
+    outline:none;
+    box-sizing:border-box;
+}
+
+.login-box input::placeholder{
+    color:#9ca3af;
+}
+
+.password-box{
+    position:relative;
+}
+
+.toggle-password{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    font-size:20px;
+}
