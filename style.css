@@ -987,3 +987,27 @@ padding-bottom:calc(95px + env(safe-area-inset-bottom));
     cursor:pointer;
     font-size:20px;
 }
+/* Register Links */
+
+.signup-link{
+    text-align:center;
+    margin-top:25px;
+}
+
+.signup-link p{
+    color:#bdbdbd;
+    margin-bottom:12px;
+}
+
+.back-home{
+    display:inline-block;
+    text-decoration:none;
+    color:#2f80ed;
+    font-weight:600;
+    margin:6px 0;
+    transition:.3s;
+}
+
+.back-home:hover{
+    color:#56ccf2;
+}
