@@ -1,200 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Register - RAXY SOCIAL</title>
+    <title>Register - RAXY SOCIAL</title>
 
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="login-container">
+    <div class="login-container">
 
-    <div class="login-box">
+        <div class="login-box">
 
-        <h1>📝 Create Your Account</h1>
+            <h1>📝 Create Your Account</h1>
 
-        <p>Create your RAXY SOCIAL account and start shopping premium digital products.</p>
+            <p>Create your RAXY SOCIAL account and start shopping premium digital products.</p>
 
-        <form action="#" method="POST" onsubmit="return validateForm()">
+            <form onsubmit="return validateForm()">
 
-            <label for="username">Username</label>
-
-            <input
-                type="text"
-                id="username"
-                name="username"
-                placeholder="Choose your preferred username"
-                autocomplete="username"
-                required>
-
-            <label for="email">Email Address</label>
-
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email address"
-                autocomplete="email"
-                required>
-
-            <label for="phone">Phone Number</label>
-
-            <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Enter your phone number"
-                autocomplete="tel"
-                required>
-
-            <label for="registerPassword">Password</label>
-
-            <div class="password-box">
+                <label for="username">Username</label>
 
                 <input
-                    type="password"
-                    id="registerPassword"
-                    name="password"
-                    placeholder="Choose a password"
-                    autocomplete="new-password"
-                    oninput="checkPasswordStrength()"
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Choose your preferred username"
+                    autocomplete="username"
                     required>
 
-                <span class="toggle-password" onclick="toggleRegisterPassword()">
-                    👁️
-                </span>
-
-            </div>
-
-            <p id="passwordStrength" class="password-strength"></p>
-
-            <label for="confirmPassword">Confirm Password</label>
-
-            <div class="password-box">
+                <label for="email">Email Address</label>
 
                 <input
-                    type="password"
-                    id="confirmPassword"
-                    name="confirm_password"
-                    placeholder="Repeat your password"
-                    autocomplete="new-password"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    autocomplete="email"
                     required>
 
-                <span class="toggle-password" onclick="toggleConfirmPassword()">
-                    👁️
-                </span>
+                <label for="phone">Phone Number</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    autocomplete="tel"
+                    required>
+
+                <label for="registerPassword">Password</label>
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        name="password"
+                        placeholder="Choose a password"
+                        autocomplete="new-password"
+                        oninput="checkPasswordStrength()"
+                        required>
+
+                    <span
+                        class="toggle-password"
+                        onclick="toggleRegisterPassword()">
+                        👁️
+                    </span>
+
+                </div>
+
+                <p id="passwordStrength" class="password-strength"></p>
+
+                <label for="confirmPassword">Confirm Password</label>
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirm_password"
+                        placeholder="Repeat your password"
+                        autocomplete="new-password"
+                        required>
+
+                    <span
+                        class="toggle-password"
+                        onclick="toggleConfirmPassword()">
+                        👁️
+                    </span>
+
+                </div>
+
+                <label class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        required>
+
+                    I agree to the
+                    <a href="#">Terms &amp; Conditions</a>
+
+                </label>
+
+                <button type="submit">
+                    📝 Create Account
+                </button>
+
+            </form>
+
+            <div class="signup-link">
+
+                <p>Already have an account?</p>
+
+                <a href="login.html" class="back-home">
+                    🔑 Log In
+                </a>
+
+                <br><br>
+
+                <a href="index.html" class="back-home">
+                    ⬅️ Back to Home
+                </a>
 
             </div>
-
-            <label class="terms">
-                <input type="checkbox" id="terms" required>
-                I agree to the
-                <a href="#">Terms & Conditions</a>
-            </label>
-
-            <button type="submit">
-                📝 Create Account
-            </button>
-
-        </form>
-
-        <div class="signup-link">
-
-            <p>Already have an account?</p>
-
-            <a href="login.html" class="back-home">
-                🔑 Log In
-            </a>
-
-            <br><br>
-
-            <a href="index.html" class="back-home">
-                ⬅️ Back to Home
-            </a>
 
         </div>
 
     </div>
 
-</div>
-
-<script>
-
-function toggleRegisterPassword() {
-    const password = document.getElementById("registerPassword");
-    password.type = password.type === "password" ? "text" : "password";
-}
-
-function toggleConfirmPassword() {
-    const password = document.getElementById("confirmPassword");
-    password.type = password.type === "password" ? "text" : "password";
-}
-
-function checkPasswordStrength() {
-
-    const password = document.getElementById("registerPassword").value;
-    const strength = document.getElementById("passwordStrength");
-
-    if (password.length === 0) {
-        strength.innerHTML = "";
-        return;
-    }
-
-    if (password.length < 6) {
-        strength.innerHTML = "🔴 Weak Password";
-        strength.style.color = "#ff4d4d";
-    }
-    else if (password.length < 10) {
-        strength.innerHTML = "🟡 Medium Password";
-        strength.style.color = "#ffb300";
-    }
-    else {
-        strength.innerHTML = "🟢 Strong Password";
-        strength.style.color = "#25D366";
-    }
-
-}
-
-function validateForm() {
-
-    const username = document.getElementById("username").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const password = document.getElementById("registerPassword").value;
-    const confirmPassword = document.getElementById("confirmPassword").value;
-    const terms = document.getElementById("terms").checked;
-
-    if (username === "" || email === "" || phone === "") {
-        alert("Please complete all required fields.");
-        return false;
-    }
-
-    if (password.length < 6) {
-        alert("Password must be at least 6 characters.");
-        return false;
-    }
-
-    if (password !== confirmPassword) {
-        alert("Passwords do not match.");
-        return false;
-    }
-
-    if (!terms) {
-        alert("Please accept the Terms & Conditions.");
-        return false;
-    }
-
-    alert("Registration successful! (Backend coming soon)");
-
-    return false;
-
-}
-
-</script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
