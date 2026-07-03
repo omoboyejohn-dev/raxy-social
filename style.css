@@ -929,3 +929,23 @@ padding-bottom:calc(95px + env(safe-area-inset-bottom));
 .back-home:hover{
     text-decoration:underline;
 }
+/* Register Button */
+
+.login-box button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#2f80ed;
+    color:#fff;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    margin-top:20px;
+}
+
+.login-box button:hover{
+    background:#1565c0;
+    transform:translateY(-2px);
+}
