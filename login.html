@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Login - RAXY SOCIAL</title>
 
 <link rel="stylesheet" href="style.css">
@@ -16,15 +17,19 @@
 
         <h1>🔑 Welcome Back</h1>
 
-        <p>Log in to your RAXY SOCIAL account</p>
+        <p>Sign in to your RAXY SOCIAL account</p>
 
         <form action="#" method="POST">
+
+            <label>Email Address</label>
 
             <input
                 type="email"
                 name="email"
-                placeholder="Email Address"
+                placeholder="Enter your email address"
                 required>
+
+            <label>Password</label>
 
             <div class="password-box">
 
@@ -32,17 +37,20 @@
                     type="password"
                     id="password"
                     name="password"
-                    placeholder="Password"
+                    placeholder="Enter your password"
                     required>
 
-                <span class="toggle-password" onclick="togglePassword()">
+                <span class="toggle-password"
+                onclick="togglePassword()">
                     👁️
                 </span>
 
             </div>
 
             <div class="forgot-password">
-                <a href="forgot-password.html">Forgot Password?</a>
+                <a href="forgot-password.html">
+                    Forgot Password?
+                </a>
             </div>
 
             <button type="submit">
@@ -51,30 +59,36 @@
 
         </form>
 
-        <a href="register.html" class="create-account">
-            📝 Create Account
-        </a>
+        <div class="signup-link">
 
-        <br><br>
+            <p>Don't have an account?</p>
 
-        <a href="index.html" class="back-home">
-            ⬅️ Back to Home
-        </a>
+            <a href="register.html" class="create-account">
+                📝 Create Account
+            </a>
+
+            <br><br>
+
+            <a href="index.html" class="back-home">
+                ⬅️ Back to Home
+            </a>
+
+        </div>
 
     </div>
 
 </div>
 
 <script>
-function togglePassword() {
-    const password = document.getElementById("password");
 
-    if (password.type === "password") {
-        password.type = "text";
-    } else {
-        password.type = "password";
-    }
+function togglePassword(){
+
+const password=document.getElementById("password");
+
+password.type=password.type==="password"?"text":"password";
+
 }
+
 </script>
 
 </body>
