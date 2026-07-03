@@ -733,3 +733,74 @@ padding-bottom:calc(95px + env(safe-area-inset-bottom));
 .signup-link a:hover{
     text-decoration:underline;
 }
+/* ===== PASSWORD BOX ===== */
+
+.password-box{
+    position:relative;
+    margin-bottom:15px;
+}
+
+.password-box input{
+    width:100%;
+    padding:15px;
+    padding-right:50px;
+    border:none;
+    border-radius:10px;
+    background:#21262d;
+    color:#fff;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+.toggle-password{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    font-size:20px;
+    user-select:none;
+}
+
+/* ===== FORGOT PASSWORD ===== */
+
+.forgot-password{
+    text-align:right;
+    margin-bottom:20px;
+}
+
+.forgot-password a{
+    color:#25D366;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.forgot-password a:hover{
+    text-decoration:underline;
+}
+
+/* ===== CREATE ACCOUNT BUTTON ===== */
+
+.create-account{
+    display:block;
+    width:100%;
+    margin-top:15px;
+    padding:15px;
+    background:#25D366;
+    color:#fff;
+    text-align:center;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* ===== BACK TO HOME BUTTON ===== */
+
+.back-home{
+    display:block;
+    text-align:center;
+    color:#25D366;
+    text-decoration:none;
+    margin-top:20px;
+    font-weight:bold;
+}
