@@ -19,7 +19,7 @@
 
         <p>Create your RAXY SOCIAL account and start shopping premium digital products.</p>
 
-        <form action="#" method="POST">
+        <form action="#" method="POST" onsubmit="return validateForm()">
 
             <label for="username">Username</label>
 
@@ -64,8 +64,7 @@
                     oninput="checkPasswordStrength()"
                     required>
 
-                <span class="toggle-password"
-                onclick="toggleRegisterPassword()">
+                <span class="toggle-password" onclick="toggleRegisterPassword()">
                     👁️
                 </span>
 
@@ -85,20 +84,16 @@
                     autocomplete="new-password"
                     required>
 
-                <span class="toggle-password"
-                onclick="toggleConfirmPassword()">
+                <span class="toggle-password" onclick="toggleConfirmPassword()">
                     👁️
                 </span>
 
             </div>
 
             <label class="terms">
-
-                <input type="checkbox" required>
-
+                <input type="checkbox" id="terms" required>
                 I agree to the
                 <a href="#">Terms & Conditions</a>
-
             </label>
 
             <button type="submit">
@@ -130,19 +125,13 @@
 <script>
 
 function toggleRegisterPassword() {
-
     const password = document.getElementById("registerPassword");
-
     password.type = password.type === "password" ? "text" : "password";
-
 }
 
 function toggleConfirmPassword() {
-
     const password = document.getElementById("confirmPassword");
-
     password.type = password.type === "password" ? "text" : "password";
-
 }
 
 function checkPasswordStrength() {
@@ -152,16 +141,56 @@ function checkPasswordStrength() {
 
     if (password.length === 0) {
         strength.innerHTML = "";
-    } else if (password.length < 6) {
+        return;
+    }
+
+    if (password.length < 6) {
         strength.innerHTML = "🔴 Weak Password";
         strength.style.color = "#ff4d4d";
-    } else if (password.length < 10) {
+    }
+    else if (password.length < 10) {
         strength.innerHTML = "🟡 Medium Password";
         strength.style.color = "#ffb300";
-    } else {
+    }
+    else {
         strength.innerHTML = "🟢 Strong Password";
         strength.style.color = "#25D366";
     }
+
+}
+
+function validateForm() {
+
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const password = document.getElementById("registerPassword").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+    const terms = document.getElementById("terms").checked;
+
+    if (username === "" || email === "" || phone === "") {
+        alert("Please complete all required fields.");
+        return false;
+    }
+
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters.");
+        return false;
+    }
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+    }
+
+    if (!terms) {
+        alert("Please accept the Terms & Conditions.");
+        return false;
+    }
+
+    alert("Registration successful! (Backend coming soon)");
+
+    return false;
 
 }
 
