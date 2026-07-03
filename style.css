@@ -1011,3 +1011,29 @@ padding-bottom:calc(95px + env(safe-area-inset-bottom));
 .back-home:hover{
     color:#56ccf2;
 }
+.google-btn{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    background:#ffffff;
+    color:#222;
+    border:none;
+    border-radius:10px;
+    padding:15px;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.google-btn:hover{
+    background:#f1f1f1;
+    transform:translateY(-2px);
+}
+
+.google-btn img{
+    width:22px;
+    height:22px;
+}
